@@ -1,7 +1,7 @@
-// src/index.ts
-function greet(name: string): string {
-    return `Hello, ${name}!`;
-}
+#!/usr/bin/env node
 
-const userName: string = "TypeScript User";
-console.log(greet(userName));
+// This is the main entry point for the package - just execute CLI directly
+import('./cli').catch((error) => {
+  console.error('Failed to load CLI:', error);
+  process.exit(1);
+});
